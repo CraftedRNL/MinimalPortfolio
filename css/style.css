@@ -1,53 +1,63 @@
-
-body{
+body {
     height: 100vh;
     text-align: center;
     margin: 0px;
     font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: rgb(255, 253, 249);
 }
-.hero{
+
+* {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero {
     background-image: url(../img/bw.jpg);
     background-repeat: no-repeat;
     background-size: 110%;
-    /* background-position: left; */
     display: flex;
 }
-.hero-blurb{
+
+.hero-blurb {
     color: white;
     margin: 0px;
     height: 80%;
     width: 400px;
     display: grid;
     width: 100%;
-    grid-template:100px 300px repeat(2, 100px) 200px/ 15% 1fr 75% ;
-    
+    grid-template: 100px 300px repeat(2, 100px) 200px/ 15% 1fr 75%;
+
 }
-.hero-blurb h1{
+
+.hero-blurb h1 {
     display: flex;
-    font-size: 9em;
+    font-size: 10em;
     margin: 0px;
-    grid-row: 2 ;
+    grid-row: 2;
     grid-column: 2;
     justify-self: start;
     flex-direction: column;
     flex-wrap: wrap;
-    
+    font-weight: 500;
+    line-height: 80%;
 }
-.hero-blurb h3{
+
+.hero-blurb h3 {
     display: flex;
-    
+
     font-size: 2.5em;
     margin: 0px;
-    grid-row: 3 ;
+    grid-row: 3;
     grid-column: 2;
     justify-self: start;
     align-self: flex-end;
 }
-.hero-blurb button{
-    
-    grid-row: 5 ;
+
+.hero-blurb button {
+
+    grid-row: 5;
     grid-column: 2;
-    
+
     background-color: rgb(0, 129, 129);
     font-size: 25px;
     color: white;
@@ -57,24 +67,170 @@ body{
 }
 
 
-.aboutMe{
-     color: rgb(0, 0, 0);
+.aboutMe {
+    color: rgb(0, 0, 0);
     margin: 0px;
     height: 100vh;
     display: grid;
     width: 100%;
-    grid-template: repeat(4, 200px) / 15% 35% 35% 15% ;
-    
+
+    grid-template: repeat(3, 200px) / 16% 32% 38% 14%;
+
 }
 
+.aboutMe-blurb {
+    grid-column: 2;
+    margin: 0px;
+    height: 80%;
+    width: 400px;
+    display: grid;
+    width: 80%;
+    grid-template: 150px 50px 100px 50px 250px / 1fr;
+}
 
-.aboutMe-image{
+.aboutMe-blurb h1 {
+    margin: 0px;
+    display: flex;
+    justify-self: start;
+    color: rgb(0, 155, 155);
+    grid-row: 3;
+    font-size: 6em;
+    font-weight: 600;
+
+}
+
+.aboutMe-blurb h2 {
+    margin: 0px;
+    display: flex;
+    justify-self: start;
+    grid-row: 2;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.aboutMe-blurb h4 {
+    margin: 0px;
+    display: flex;
+    justify-self: start;
+    text-align: start;
+    grid-row: 5;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.aboutMe-image {
     background-image: url(../img/thinking.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: 80%;
     display: flex;
-    grid-row: 1 / span 4;
-    grid-column: 3  ;
+    grid-row: 1/ span 4;
+    grid-column: 3;
     width: 100%;
     height: 100%;
+}
+
+.contact {
+    color: rgb(0, 0, 0);
+    margin: 0px;
+    height: 100vh;
+    display: grid;
+    width: 100%;
+    grid-template: repeat(5, 150px) / 16% 32% 38% 14%;
+}
+
+.contact-blurb {
+    grid-column: 2;
+    margin: 0px;
+    height: 80%;
+    width: 400px;
+    display: grid;
+    width: 80%;
+    grid-template: 100px 300px 100px 30px 40px 50px 30px 40px / 1fr;
+}
+
+.contact-blurb h1 {
+    margin: 0px;
+    display: flex;
+    /* justify-self: start; */
+    text-align: start;
+    grid-row: 2;
+    font-size: 8em;
+    font-weight: 600;
+
+}
+
+.contact-blurb h2 {
+    grid-row: 4;
+}
+
+.contact-blurb h3 {
+    grid-row: 5;
+}
+
+.contact-blurb h4 {
+    grid-row: 7;
+}
+
+.contact-blurb h5 {
+    grid-row: 8;
+}
+
+.contact-blurb h3,
+.contact-blurb h5 {
+    margin: 0px;
+    display: flex;
+    text-align: start;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.contact-blurb h2,
+.contact-blurb h4 {
+    margin: 0px;
+    display: flex;
+    text-align: start;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: rgb(0, 155, 155);
+}
+
+.contact-image {
+    background-image: url(../img/walking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    display: flex;
+    grid-row: 1/ span 4;
+    grid-column: 3;
+    width: 100%;
+    height: 100%;
+}
+.contact-social img{
+    width: 40px;
+    height: 40px;
+}
+.contact-social{
+    display: flex;
+    justify-content: space-around;
+    justify-self: end;
+    width: 35%;
+    margin-left: 20px;
+    grid-row:6;
+    grid-column: 3;
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 35px;
+}
+.footer p{
+    display: flex;
+    color: white;
+}
+.footer button{
+    display: inline;
+    color: white;
 }
